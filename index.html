@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Portfolio</title>
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="dark:bg-slate-900 dark:text-gray-200">
+    <!-- header -->
+    <header class="fixed w-full py-4 lg:px-0 px-5 z-[999] duration-300">
+
+    <nav class=" flex justify-between items-center max-w-6xl mx-auto px-2">
+      <div class="flex gap-4 items-center">
+          <div class="bg-primary text-white rounded-full size-10 text-xl flex-center">R</div>
+          <div>
+            <h4 class="font-bold text-lg uppercase">Robin</h4>
+            <p>Profile</p>
+          </div>
+      </div>
+
+      <ul class="md:flex hidden gap-10 hover:*:text-primary *:duration-200">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About Us</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact Us</a>
+        </li>
+        <span class="theme-switch  ">
+          <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
+        </span>
+      </ul>
+
+      <div class="flex items-center gap-6">
+        <span class="theme-switch  md:hidden">
+          <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
+        </span>
+        <a href="#contact">
+          <button class="btn btn-outline">
+            <i class="fa-regular fa-paper-plane md:!flex hidden"></i>
+            Let's Talk</button>
+        </a>
+      
+        <span id="menubar" class="cursor-pointer md:hidden text-xl">
+          <i id="menu-icon" class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+    </nav>
+    </header>
+
+    <!-- backdrop -->
+    <span id="backdrop" class="fixed h-screen bg-black/10 inset-0 backdrop-blur-sm z-[997] hidden">
+    
+    </span>
+
+    <!-- mobile nav -->
+    <ul id="mobile-nav" class="flex-center flex-col gap-10 fixed w-full bottom-0 duration-200  left-0 z-[998] text-xl md:hidden dark:bg-slate-800 bg-primary text-white rounded-t-3xl h-0  overflow-hidden">
+   
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About Us</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact Us</a>
+        </li>
+     
+    </ul>
+
+    <!-- Home -->
+    <section id="home" class="min-h-screen container grid place-items-center relative before:absolute before:top-0 before:bg-heroLight before:sizefull before:start-1/2 before:transform before:-translate-x-1/2 before:bg-no-repeat before:-z-[1] before:dark:bg-heroDark">
+      <div class="size-full pt-20 grid md:grid-cols-6 items-center justify-around max-w-6xl">
+        <div class="lg:col-span-2 md:col-span-3 md:text-left sm:pl-2 text-center">
+          <div>
+            <h5 class="font-medium text-gray-600 dark:text-gray-200">Hello Welcome</h5>
+            <h1 class="sm:text-5xl text-4xl leading-normal dark:text-white relative font-medium ">I'm <span class="text-primary">Robin</span><br>
+            Website Designer
+            </h1>
+            <button class="btn btn-filled mt-5">
+              <i class="fa-regular fa-envelope" ></i>
+              Hire me</button>
+
+              <button class="font-semibold dark:text-gray-200 border-b-2 border-gray-700 ml-4">
+                 <i class="fa-solid fa-up-right-from-square" ></i>
+                See Portfolio</button>
+          </div>
+          <div class="md:w-96 md:ml-auto flex mt-9 gap-2 dark:text-gray-300">
+             <i class="fa-solid fa-border-all mt-0.5 md:inline-block hidden" ></i>
+             <p class="text-xs text-balance leading-5 max-w-md px-2 mx-auto">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quidem suscipit nam tenetur eum, corporis excepturi! Sint veritatis quaerat, rerum commodi architecto.
+             </p>
+          </div>
+          <div class="flex items-center md:justify-end justify-center mt-9 gap-6 dark:text-gray-200 text-gray-600">
+            <p class="text-xs">Follow us</p>
+            <div class="flex gap-3">
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-github" ></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-linkedin" ></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-facebook" ></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="lg:col-span-2 md:col-span-3">
+          <img src="./assets/person.png" class="w-2/3 md:w-full max-w-96 mt-5 md:mt-0 mx-auto" alt="">
+        </div>
+        <div class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l md:bg-none bg-gradient-to-l from-gray-100 dark:from-slate-800 md:mt-0 lg:h-96 md:h-auto h-96 mt-2">
+          <ul class=" text-2xl leading-[3.14rem] text-center pt-5 lg:block md:flex items-center justify-between data-[slot=count]:*:text-3xl data-[slot=count]:*:font-bold">
+            <li data-slot="count" >12+</li>
+            <li>Year of <span class="text-primary "> Experience</span></li><br>
+            <li data-slot="count">8+</li>
+            <li>Completed  <span class="text-primary">Projects</span> </li>
+            <li>
+              <button class="btn btn-outline lg:mt-10 md:mt-0 mt-10">
+                <i class="fa-solid fa-download "></i>
+                Download CV</button>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container min-h-screen flex-center">
+      <div>
+        <div class="text-center text-balance">
+          <h3>What I Know</h3>
+          <p class="px-2 mt-3 text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid architecto similique officia incidunt, eos neque enim temporibus exercitationem beatae quidem quis aspernatur est libero. Totam est tenetur sunt corporis assumenda!</p>
+        </div>
+        <div class="max-w-2xl grid sm:grid-cols-3 md:grid-cols-1 gap-6 px-2 mt-10 mx-auto *:text-lg *:bg-gray-100 *:dark:bg-slate-800 *:p-7 *:flex *:items-center *:gap-12 *:md:flex-row *:flex-col *:rounded-xl *:max-w-sm *:sm:max-w-full *:mx-auto *:text-center *:sm:text-left hover:*:brightness-90 *:shadow-sm *:cursor-pointer">
+          <div>
+            <div class="*:text-primary">
+              <i class="fa-regular fa-object-ungroup"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">
+                Web Design
+              </h6>
+            </div>
+            <div>
+              <p class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aspernatur cumque dolorum eaque? Odit vitae repellat?</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-long text-primary cursor-pointer rotate-45"></i>
+          </div>
+          <div>
+            <div class="*:text-primary">
+              <i class="fa-solid fa-pen-nib"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">
+                Ui Ux Design
+              </h6>
+            </div>
+            <div>
+              <p class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aspernatur cumque dolorum eaque? Odit vitae repellat?</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-long text-primary cursor-pointer rotate-45"></i>
+          </div>
+          <div>
+            <div class="*:text-primary">
+              <i class="fa-solid fa-people-group"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">
+               Teams Play
+              </h6>
+            </div>
+            <div>
+              <p class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aspernatur cumque dolorum eaque? Odit vitae repellat?</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-long text-primary cursor-pointer rotate-45"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container min-h-screen flex-center">
+      <div class="text-center text-balance">
+        <h3>My Projects</h3>
+        <p class="px-2 mt-3 text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit suscipit dolor eveniet rem modi necessitatibus assumenda quaerat dolores, corrupti voluptatibus magni officiis cum ipsam excepturi hic, at, doloribus adipisci error.</p><br>
+        <div class="flex-center gap-4">
+          <button class="btn btn-filled">Website</button>
+          <button class="btn btn-outline">Mobile App</button>
+          <button class="btn btn-filled">Figma</button>
+        </div>
+        <br>
+         <div class="*:size-full *:object-cover *:border-4 *:dark:border-white *:rounded-md gap-4 *:cursor-pointer *:duration-1000 grid
+         md:grid-rows-2 grid-cols-2 mx-auto max-w-4xl md:px-0 px-10 *:hover:grayscale hover:*:grayscale-0">
+          <img src="./assets/pro1.jpg" alt="">
+          <img src="./assets/pro3.jpg" alt="" class="row-span-2">
+          <img src="./assets/pro2.jpg" alt="">
+         </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container relative max-w-4xl max-auto min-h-screen flex-center px-5">
+      <div class="pb-10">
+        <div class="text-center">
+          <h3>Contact me</h3>
+          <p class="px-2 mt-3 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsam possimus recusandae, ullam aliquam aut. Ex dolore ipsam, nesciunt deserunt consectetur quia maiores soluta nihil quam vitae quis tenetur id?</p>
+        </div>
+        <div class="mt-12 md:relative flex flex-col gap-5 sm:max-w-full mx-auto  max-w-xs">
+        <div class="dark:bg-slate-800 bg-slate-50 dark:text-gray-100 text-gray-800 rounded-lg shadow-xl mx-auto md:w-2/3 w-full  py-14 px-7 ">
+          <h3 class="font-semibold">Send Us A <br> <span>Message</span> </h3>
+          <form class="*:flex *:flex-col *:gap-1 mt-5 md:w-2/3 w-full" >
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="Enter your email address">
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea type="message" id="message" placeholder="Enter your message"> </textarea>
+            </div>
+            <button class="btn btn-filled ml-auto">Send to us</button>
+          </form>
+        </div>
+        <div class="dark:bg-gray-700 bg-white py-12 px-7 md:absolute lg:-right-9 right-28 rounded-xl shadow-xl md:w-2/5 h-5/6 top-28 w-full mx-auto">
+          <h3 class="font-semibold text-2xl border-b pb-4 border-gray-600">Drop In Our <br> Office <span class="text-primary"></span> </h3>
+          <div class="py-4">
+            <p class="text-xs text-gray-400 leading-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eos. At cumque qui pariatur tenetur, suscipit similique nihil tempora minima error? Unde eos animi error id odit tempore maiores consequatur?</p>
+            <ul class="*:flex *:gap-4 *:items-center *:mt-4">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h2>Ho Chi Mini City</h2>
+                  <address>13P John Doe Street, Us</address>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <p>codeprogram@gmail.com</p>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <p>+123 456 7890</p>
+              </li>
+            </ul>
+            <div class="flex items-center md:justify-end justify-center mt-9 gap-6 dark:text-gray-200 text-gray-600">
+              <p class="text-xs">Follow us</p>
+              <div class="flex gap-3">
+                <a href="#" class="social-icon">
+                  <i class="fa-brands fa-github" ></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fa-brands fa-linkedin" ></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fa-brands fa-facebook" ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark:bg-slate-700 bg-slate-100 text-center py-2">
+
+Copyright &copy; 2024
+<ul class="flex-center gap-5 py-4 text-sm  ">
+  <li>
+    <a href="#home">Home</a>
+  </li>
+  <li>
+    <a href="#about">About Us</a>
+  </li>
+  <li>
+    <a href="#projects">Projects</a>
+  </li>
+  <li>
+    <a href="#contact">Contact Us</a>
+  </li>
+</ul>
+    </footer>
+
+    <script type="module"  src="/main.js"  defer></script>
+    <script>
+      
+    </script>
+    <!-- sticky nav script -->
+    <script>
+
+
+      
+      const header = document.querySelector("header");
+      const toggleClasses = (element,classes, condition)=>{
+        classes.forEach((className) => {
+          element.classList.toggle(className, condition);
+        });
+      }
+      window.addEventListener("scroll", ()=>{
+        toggleClasses(
+          header,
+          [
+          "bg-white",
+          "dark:text-white",
+          "dark:bg-slate-800",
+          "shadow-lg",
+          "dark:sm:bg-slate-900",
+          ],
+          window.scrollY > 0
+        );
+      });
+    </script>
+  </body>
+</html>
